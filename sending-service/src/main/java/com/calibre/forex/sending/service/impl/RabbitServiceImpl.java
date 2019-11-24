@@ -28,6 +28,7 @@ public class RabbitServiceImpl implements RabbitService {
 
     @Override
     @RabbitListener(queues = RabbitConfig.FOREX_RATE_QUEUE)
+    @RabbitHandler
     public void receiveForexRate(String ratesJson) {
         System.out.println("===rateJson :"+ratesJson);
         List<Currency> rateList = JsonUtil.parseJsonList(ratesJson, Currency.class);
