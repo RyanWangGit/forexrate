@@ -1,0 +1,4 @@
+rootProject.name = 'forex'
+include 'fetching-service'
+include 'sending-service'
+
