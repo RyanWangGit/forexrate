@@ -33,3 +33,4 @@ output/
 ### VS Code ###
 .vscode/
 /sending-service/src/docker/sending-service-0.0.1-SNAPSHOT.jar
+/fetching-service/src/docker/fetching-service-0.0.1-SNAPSHOT.jar
