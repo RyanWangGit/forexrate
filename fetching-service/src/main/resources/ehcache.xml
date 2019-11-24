@@ -1,4 +1,4 @@
-<ehcache updateCheck="false" dynamicConfig="false">
+<ehcache name="appCache" updateCheck="false" dynamicConfig="false">
     <defaultCache
             maxElementsInMemory="10000"
             eternal="false"
