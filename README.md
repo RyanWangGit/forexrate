@@ -1,10 +1,10 @@
 This project is include 3 modules:
 
-1. fetching-service: this service monitors the FOREX rate from eodhistoricaldata.com, if the rate changes that user subscribed got any change, then send message to RabbitMQ.
+1. Fetching-service: this service monitors the FOREX rate from eodhistoricaldata.com, if the rate changes that user subscribed got any change, then send message to RabbitMQ.
 
-2. mq: this module is RabbitMQ, we can get image from docker hub.
+2. MQ: this module is RabbitMQ, we can get image from docker hub.
 
-3. sending-service: this service is message consumer that monitors RqbbitMQ, then send mail to customer about FX rate changes.
+3. Sending-service: this service is message consumer that monitors RqbbitMQ, then send mail to customer about FX rate changes.
 
 **Fectching-service:**
 - This service get the rate data from every minute, this i a schedule job, and can be change execution time in a application.properties
@@ -28,5 +28,6 @@ This project is include 3 modules:
 `docker run -d  -v /Users/Ryan/Devops/docker/fetching-service/logs:/fetching-service/logs  -v /Users/Ryan/Devops/docker/fetching-service/config:/fetching-service/config --name fetching-service --hostname=fetching-service fetching-service:latest`
 
 2. For sending-service
+
 `docker run -d  -v /Users/Ryan/Devops/docker/sending-service/logs:/sending-service/logs  -v /Users/Ryan/Devops/docker/sending-service/config:/sending-service/config -v /Users/Ryan/Devops/docker/sending-service/output:/sending-service/output --name sending-service --hostname=sending-service sending-service:latest`
 
