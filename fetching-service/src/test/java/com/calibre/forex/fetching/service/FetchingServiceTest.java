@@ -29,7 +29,6 @@ class FetchingServiceTest {
     void before(){
         Cache cache = cacheManager.getCache(Constants.FETCHING_CACHE_NAME);
         cache.evict(Constants.FETCHING_CACHE_KEY_OLD_RATE);
-
     }
 
     @Test
@@ -53,9 +52,9 @@ class FetchingServiceTest {
     void getForexRateChanged() {
         Map<String, Currency> newRate = fetchingService.fetchForexRateList();
         boolean changed = fetchingService.getForexRateChanged(newRate);
-        assertEquals(true,changed);
+        assertTrue(changed);
         changed = fetchingService.getForexRateChanged(newRate);
-        assertEquals(false,changed);
+        assertFalse(changed);
 
     }
 }
