@@ -30,7 +30,7 @@ public class RabbitServiceImpl implements RabbitService {
     @RabbitListener(queues = RabbitConfig.FOREX_RATE_QUEUE)
     @RabbitHandler
     public void receiveForexRate(String ratesJson) {
-        System.out.println("===rateJson :"+ratesJson);
+        logger.debug("===rateJson :"+ratesJson);
         List<Currency> rateList = JsonUtil.parseJsonList(ratesJson, Currency.class);
         String attachPath = csvService.write(rateList);
         mail.setSubject("About FOREX Rate updates from Calibre");

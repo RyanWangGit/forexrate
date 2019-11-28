@@ -30,7 +30,7 @@ class RabbitServiceTest {
     @Test
     void sendChangedForexRate() {
         Map<String, Currency> rateMap = fetchingService.fetchForexRateList();
-        rabbitService.sendChangedForexRate(rateMap);
+//        rabbitService.sendChangedForexRate(rateMap);
     }
 
 }
