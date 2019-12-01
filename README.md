@@ -23,7 +23,7 @@ This project includes 3 modules:
 
 **Docker command**
 
-1. For fetching-srevice
+1. For fetching-service
 
 `docker run -d  -v /Users/Ryan/Devops/docker/fetching-service/logs:/fetching-service/logs  -v /Users/Ryan/Devops/docker/fetching-service/config:/fetching-service/config --name fetching-service --hostname=fetching-service fetching-service:latest`
 
