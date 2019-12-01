@@ -23,7 +23,7 @@ public class FetchingJob {
     private RabbitService rabbitService;
 
     @Scheduled(cron = "${app.cron.schedule}")
-    public void fectchingData(){
+    public void fetchingData(){
         logger.info("Job Executing at {} ",System.currentTimeMillis());
         Map<String,Currency> rateMap = fetchingService.fetchForexRateList();
         boolean changed = fetchingService.getForexRateChanged(rateMap);
