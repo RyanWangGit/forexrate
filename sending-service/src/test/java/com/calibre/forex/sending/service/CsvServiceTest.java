@@ -30,7 +30,6 @@ class CsvServiceTest {
     }
     @Test
     void write() {
-
         csvService.write(rates);
     }
 }
