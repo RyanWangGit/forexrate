@@ -31,7 +31,7 @@ This project includes 3 modules:
 
 `docker run -d  -v /Users/Ryan/Devops/docker/sending-service/logs:/sending-service/logs  -v /Users/Ryan/Devops/docker/sending-service/config:/sending-service/config -v /Users/Ryan/Devops/docker/sending-service/output:/sending-service/output --name sending-service --hostname=sending-service sending-service:latest`
 
-**Technical Stack**
+**Technology Stack**
 - Spring Boot
 - RabbitMQ
 - Ehcache
