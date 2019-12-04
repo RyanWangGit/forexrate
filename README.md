@@ -1,5 +1,5 @@
 ### **Introduction**
-This project is a code experiment
+This project is a coding experiment.
 
 ![avatar](./CalibreFT-Code-Experiment.jpg)
 
