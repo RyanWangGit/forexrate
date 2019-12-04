@@ -1,3 +1,8 @@
+### **Introduction**
+This project is a code experiment
+
+![avatar](./CalibreFT-Code-Experiment.jpg)
+
 This project includes 3 modules:
 
 1. Fetching-service: this service monitors the FOREX rate from eodhistoricaldata.com, if the rate that user subscribed get change, then the service send message to RabbitMQ.
