@@ -16,6 +16,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import java.math.RoundingMode;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -36,7 +37,7 @@ public class CsvServiceImpl implements CsvService {
             fileExists = true;
         }
 
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(attachFile, true));){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(attachFile, true))){
             if(!fileExists){
                 bw.write(header);
             }
@@ -63,12 +64,15 @@ public class CsvServiceImpl implements CsvService {
         String path = System.getProperty("user.dir");
         System.out.println("=== path "+path);
         File filePath = new File(path,csvFile.getPath());
-        if (!filePath.exists()) filePath.mkdir();
+        if (!filePath.exists()){
+            boolean created = filePath.mkdir();
+        }
         stringBuffer.append(filePath.getAbsolutePath()).append("/");
         stringBuffer.append(csvFile.getPrefix());
         stringBuffer.append("_");
-        String ymd = DateTimeUtils.getCurrentDateStr();
-        String hm = DateTimeUtils.getCurrentTimeStr();
+        LocalDateTime localDateTime = LocalDateTime.now();
+        String ymd = DateTimeUtils.getDateStr(localDateTime);
+        String hm = DateTimeUtils.getTimeStr(localDateTime);
         stringBuffer.append(ymd).append("_");
         stringBuffer.append(hm).append(".csv");
         return stringBuffer.toString();
