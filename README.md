@@ -1,7 +1,6 @@
 ### **Introduction**
-This project is a coding experiment.
 
-![avatar](./CalibreFT-Code-Experiment.jpg)
+![avatar](Forex-Rate-Architect.jpg)
 
 This project includes 3 modules:
 
